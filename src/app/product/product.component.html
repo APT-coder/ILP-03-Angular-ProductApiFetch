@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <h3>Browse Products by Category</h3>
+    <div class="col-12" *ngFor="let category of categories">
+      <div class="carousel-container">
+        <h4>{{ category.name }} Products</h4>
+        <button class="carousel-button left" (click)="scrollCarousel('left', category.name)">&lt;</button>
+        <button class="carousel-button right" (click)="scrollCarousel('right', category.name)">&gt;</button>
+        <div class="carousel" [id]="'carousel-' + category.name">
+          <app-product-card *ngFor="let product of category.products"
+                       [product]="product">
+          </app-product-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

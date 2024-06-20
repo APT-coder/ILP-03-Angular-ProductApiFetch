@@ -1,0 +1,38 @@
+.container{
+  margin-top: 20px;
+}
+
+.carousel-container {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.carousel-button.left {
+  left: 0;
+}
+
+.carousel-button.right {
+  right: 0;
+}
